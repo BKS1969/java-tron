@@ -38,6 +38,12 @@ dependencies {
     //local libraries
     implementation fileTree(dir: 'libs', include: '*.jar')
     // end local libraries
+    
+    // Version constraints for transitive dependencies
+    constraints {
+        implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.7.1'
+    }
+    
     testImplementation group: 'org.hamcrest', name: 'hamcrest-junit', version: '1.0.0.1'
 
     implementation group: 'com.google.inject', name: 'guice', version: '4.1.0'
